@@ -5,13 +5,13 @@
 ***** Author      :: GTA CM Team                        								        *****
 ***** Date        :: 024/01/2017                                                                 *****
 ***************************************************************/
-package com.mesh.devops.tools
+package org.carnival.scm
 
 def setJavaHome(VERSION)
 {
    try {
      wrap([$class: 'AnsiColorBuildWrapper']) {
-       env.JAVA_HOME="${tool "${VERSION}"}"
+       env.JAVA_HOME="${tool "${JAVA_VERSION}"}"
        env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
        sh 'java -version'
 		

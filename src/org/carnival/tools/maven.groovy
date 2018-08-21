@@ -6,13 +6,13 @@
 ***** Date        :: 024/01/2017                                                                 *****
 ***************************************************************/
 
-package com.mesh.devops.tools
+package org.carnival.scm
 
 def setMavenHome(VERSION)
 {
    try {
      wrap([$class: 'AnsiColorBuildWrapper']) {
-       env.MAVEN_VERSION="${tool "${VERSION}"}"
+       env.MAVEN_VERSION="${tool "${MAVEN_VERSION}"}"
        echo "'${MAVEN_VERSION}'"
       //echo "'${MAVEN_HOME}'"
        sh "${MAVEN_VERSION}/bin/mvn --version"
