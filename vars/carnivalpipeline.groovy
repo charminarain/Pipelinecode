@@ -91,3 +91,5 @@ def call(body)
       def nexus = new publishNexusRepo()
       nexus.publishMavenArtifactsToNexus("${NEXUS_VERSION}","${NEXUS_PROTOCAL}","${NEXUS_HOST_URL}","${GROUP_ID}","${VERSION}","${REPOSITORY_NAME}","${NEXUS_CREDENTIAL_ID}","${PROJECT_NAME}")
     }
+}
+}
