@@ -83,13 +83,13 @@ def call(body)
           }
       }
     }
-    stage('Publish Artifact'){
+    /*stage('Publish Artifact'){
       def GROUP_ID = "com.cognitivesearch"
       def VERSION = "0.0.1"
       def REPOSITORY_NAME = "releases"
       def PROJECT_NAME = "cognitive-pipeline"
       def nexus = new publishNexusRepo()
       nexus.publishMavenArtifactsToNexus("${NEXUS_VERSION}","${NEXUS_PROTOCAL}","${NEXUS_HOST_URL}","${GROUP_ID}","${VERSION}","${REPOSITORY_NAME}","${NEXUS_CREDENTIAL_ID}","${PROJECT_NAME}")
-    }
+    }*/
 }
 }
