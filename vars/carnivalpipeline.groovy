@@ -3,6 +3,8 @@
 /* IMPORTING MODULE */
 import org.carnival.scm.*
 import org.carnival.build.*
+import org.carnival.tools.maven.groovy
+
 def call(body)
 {
    def config = [:]
@@ -10,6 +12,8 @@ def call(body)
    body.delegate = config
    body()
    def scm = new bitbucket()
+   def VERSION = "Maven-3.5.3"
+   
    timestamps {
  
     /*stage('Preparing CI Environment'){
