@@ -3,7 +3,7 @@
 /* IMPORTING MODULE */
 import org.carnival.scm.*
 import org.carnival.build.*
-import org.carnival.tools.maven.groovy
+import org.carnival.tools.*
 
 def call(body)
 {
