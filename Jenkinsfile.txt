@@ -1,0 +1,4 @@
+library 'first_shared_library'
+node {
+carnivalpipeline{}
+}
