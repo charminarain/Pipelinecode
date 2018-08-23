@@ -4,6 +4,7 @@
 import org.carnival.scm.*
 import org.carnival.build.*
 import org.carnival.tools.*
+import org.carnival.jenkins.*
 
 def call(body)
 {
@@ -17,12 +18,12 @@ def call(body)
    
    timestamps {
  
-    /*stage('Preparing CI Environment'){
+    stage('Preparing CI Environment'){
         try {
           currentBuild.result = "SUCCESS"
           def wspace = new cleanws()
           wspace.cleanWS()
-          jobprop.setProperties()
+         // jobprop.setProperties()
       }
       catch (Exception error)
         {
@@ -31,7 +32,7 @@ def call(body)
             throw error
           }
       }
-    }*/
+    }
     stage('Initializing Devops tools'){
       try {
           def j = new jdk()

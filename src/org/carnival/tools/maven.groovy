@@ -17,6 +17,7 @@ def setMavenHome(VERSION)
 	   env.MAVEN_HOME="${tool "${VERSION}"}"
 	   echo "2"
        env.PATH="${env.MAVEN_HOME}\bin:${env.PATH}"
+       echo "3"
        bat "mvn --version"
 	   }
    }
