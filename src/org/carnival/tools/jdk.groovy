@@ -11,9 +11,12 @@ def setJavaHome(VERSION)
 {
    try {
      wrap([$class: 'AnsiColorBuildWrapper']) {
+	   echo "1"
        env.JAVA_HOME="${tool "${VERSION}"}"
+	   echo "2"
        env.PATH="${env.JAVA_HOME}\bin:${env.PATH}"
-       sh 'java -version'
+	   echo "3"
+       bat 'java -version'
 		
      }
    }
