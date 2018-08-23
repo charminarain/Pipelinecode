@@ -5,9 +5,9 @@ package org.carnival.build
 def mavenbuild(POM_PATH , MAVEN_VERSION ,TASKS ){
      try {
     wrap([$class: 'AnsiColorBuildWrapper']) {
-    echo "${WORKSPACE}"
-    echo "${MAVEN_VERSION}"
-	sh "'${MAVEN_VERSION}'/bin/mvn -f '${PATH_POM}' ${TASKS}"
+    //echo "${WORKSPACE}"
+    //echo "${MAVEN_VERSION}"
+	bat "mvn -f '${PATH_POM}' ${TASKS}"
     print "\u001B[32m[INFO]: Successfully Executing the Build..."
 	}
     }
