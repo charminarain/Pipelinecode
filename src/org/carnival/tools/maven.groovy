@@ -15,7 +15,7 @@ def setMavenHome(VERSION)
        env.MAVEN_VERSION="${tool "${VERSION}"}"
        echo "'${MAVEN_VERSION}'"
       //echo "'${MAVEN_HOME}'"
-       bat '${MAVEN_VERSION}/bin/mvn --version'
+       bat '${MAVEN_VERSION}\bin\mvn --version'
 	   }
    }
    catch (error) {
