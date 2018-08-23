@@ -1,6 +1,6 @@
 #!groovy
 
-package build
+package org.carnival.build
 
 def mavenbuild(POM_PATH , MAVEN_VERSION ,TASKS ){
      try {
