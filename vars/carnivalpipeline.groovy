@@ -77,9 +77,9 @@ def call(body)
     }
     stage('Building'){
         try{
-          echo "${MAVEN_VERSION}"
+          //echo "${MAVEN_VERSION}"
           def TASKS = "clean install"
-          maven.mavenbuild("${WORKSPACE}" ,"${MAVEN_VERSION}", "${TASKS}")
+          maven.mavenbuild("${WORKSPACE}" ,"${WORKSPACE}", "${TASKS}")
           }
           catch (Exception error){
           wrap([$class: 'AnsiColorBuildWrapper']) {
