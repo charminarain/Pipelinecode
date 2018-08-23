@@ -13,7 +13,7 @@ def call(body)
    body()
    def scm = new bitbucket()
    def maven = new maven_build()
-   def VERSION = "Maven-3.5.3"
+   
    
    timestamps {
  
@@ -51,6 +51,7 @@ def call(body)
         try {
         def m = new maven()
         wrap([$class: 'AnsiColorBuildWrapper']) {
+		    def VERSION = "Maven-3.5.3"
             m.setMavenHome("${VERSION}")
           }
         }
