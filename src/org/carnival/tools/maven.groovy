@@ -12,10 +12,12 @@ def setMavenHome(VERSION)
 {
    try {
      wrap([$class: 'AnsiColorBuildWrapper']) {
-       env.MAVEN_VERSION="${tool "${VERSION}"}"
-       echo "'${MAVEN_VERSION}'"
-      //echo "'${MAVEN_HOME}'"
-       bat "${MAVEN_VERSION}\bin\mvn --version"
+       
+       echo "1"
+	   env.MAVEN_HOME="${tool "${VERSION}"}"
+	   echo "2"
+       env.PATH="${env.MAVEN_HOME}\bin:${env.PATH}"
+       bat "mvn --version"
 	   }
    }
    catch (error) {
