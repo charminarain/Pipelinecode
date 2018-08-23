@@ -3,6 +3,7 @@
 /* IMPORTING MODULE */
 import org.carnival.scm.*
 import org.carnival.build.*
+import org.carnival.tools.*
 
 def call(body)
 {
@@ -11,8 +12,8 @@ def call(body)
    body.delegate = config
    body()
    def scm = new bitbucket()
-   def maven = new mavenBuild()
-   def MAVEN_VERSION = "Maven-3.3.5"
+   def maven = new maven_build()
+   def VERSION = "Maven-3.5.3"
    
    timestamps {
  
@@ -30,7 +31,7 @@ def call(body)
             throw error
           }
       }
-    }
+    }*/
     stage('Initializing Devops tools'){
       try {
           def j = new jdk()
@@ -50,7 +51,6 @@ def call(body)
         try {
         def m = new maven()
         wrap([$class: 'AnsiColorBuildWrapper']) {
-            def VERSION = "Maven-3.5.3"
             m.setMavenHome("${VERSION}")
           }
         }
@@ -59,7 +59,7 @@ def call(body)
               throw error
           }
         }
-    }*/
+    }
     stage('Checking Codeout '){
       try {
       scm.gitCheckout()
