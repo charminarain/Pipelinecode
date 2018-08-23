@@ -11,6 +11,7 @@ def call(body)
    body.delegate = config
    body()
    def scm = new bitbucket()
+   def maven = new mavenbuild()
    def MAVEN_VERSION = "Maven-3.3.5"
    
    timestamps {
