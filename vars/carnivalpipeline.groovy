@@ -36,7 +36,7 @@ def call(body)
       try {
           def j = new jdk()
           wrap([$class: 'AnsiColorBuildWrapper']) {
-            def VERSION = "JAVA8"
+            def VERSION = "Java-10.0.2"
             j.setJavaHome("${VERSION}")
 
           }
