@@ -1,10 +1,10 @@
 #!groovy
 
 /* IMPORTING MODULE */
-import org.carnival.scm.*
-import org.carnival.build.*
-import org.carnival.tools.*
-import org.carnival.jenkins.*
+import org.test.scm.*
+import org.test.build.*
+import org.test.tools.*
+import org.test.jenkins.*
 
 def call(body)
 {
