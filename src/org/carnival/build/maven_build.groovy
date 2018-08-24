@@ -8,7 +8,7 @@ def mavenbuild(POM_PATH ,TASKS ){
     //echo "${WORKSPACE}"
     //echo "${MAVEN_VERSION}"
 	bat "mvn -f '${PATH_POM}' ${TASKS}"
-    print "\u001B[32m[INFO]: Successfully Executing the Build..."
+    //print "\u001B[32m[INFO]: Successfully Executing the Build..."
 	}
     }
     catch (error) {
