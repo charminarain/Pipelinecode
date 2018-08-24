@@ -7,7 +7,7 @@ def mavenbuild(PATH_POM ,TASKS ){
     wrap([$class: 'AnsiColorBuildWrapper']) {
     //echo "${WORKSPACE}"
     //echo "${MAVEN_VERSION}"
-	bat "mvn -f '${PATH_POM}' ${TASKS}"
+	bat "mvn -file '${PATH_POM}' ${TASKS}"
     print "\u001B[32m[INFO]: Successfully Executing the Build..."
 	}
     }
