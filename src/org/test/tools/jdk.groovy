@@ -1,29 +1,28 @@
 #!groovy
 
 /**************************************************************
-***** Description :: This Package is used for  Gradle							    *****
+***** Description :: This Package is used for  JDK							        *****
 ***** Author      :: GTA CM Team                        								        *****
 ***** Date        :: 024/01/2017                                                                 *****
 ***************************************************************/
+package org.test.tools
 
-package org.carnival.tools
-
-def setMavenHome(VERSION)
+def setJavaHome(VERSION)
 {
    try {
      wrap([$class: 'AnsiColorBuildWrapper']) {
-       
-       echo "1"
-	   env.MAVEN_HOME="${tool "${VERSION}"}"
+	   echo "1"
+       env.JAVA_HOME="${tool "${VERSION}"}"
 	   echo "2"
-       env.PATH="${env.MAVEN_HOME}\bin:${env.PATH}"
-       echo "3"
-       bat "mvn --version"
-	   }
+       env.PATH="${env.JAVA_HOME}\bin:${env.PATH}"
+	   echo "3"
+       bat 'java -version'
+		
+     }
    }
    catch (error) {
      wrap([$class: 'AnsiColorBuildWrapper']) {
-        print "\u001B[41m[ERROR]: failed to failed to set Maven ."
+         print "\u001B[41m[ERROR]: failed to set JAVA_HOME to ${JAVA_HOME}..."
         throw error
      }
    }

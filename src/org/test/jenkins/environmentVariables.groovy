@@ -2,7 +2,7 @@
 ***** Groovy Script :: environmentVariables.groovy                            *****
 ***** Description   :: This groovy code is used to perform the sonar analysis *****
 ***********************************************************************************/
-package com.mesh.devops.jenkins
+package org.test.jenkins
 
 def setEnvVariablesForPipeline()
 {

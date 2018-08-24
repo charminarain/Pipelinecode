@@ -6,7 +6,7 @@
 ***** Date        :: 024/01/2017                               ****
 *******************************************************************/
 
-package org.carnival.scm
+package org.test.scm
 
 String WORKSPACE = pwd()
 

@@ -5,7 +5,7 @@
 ***** Author      :: GTA CM Team                        								        *****
 ***** Date        :: 024/01/2017                                                                 *****
 ***************************************************************/
-package com.mesh.devops.jenkins
+package org.test.jenkins
 
 def getBuildOwnerInfo()
 {
