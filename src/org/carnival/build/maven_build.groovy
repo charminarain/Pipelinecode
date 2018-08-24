@@ -2,7 +2,7 @@
 
 package org.carnival.build
 
-def mavenbuild(POM_PATH ,TASKS ){
+def mavenbuild(PATH_POM ,TASKS ){
      try {
     wrap([$class: 'AnsiColorBuildWrapper']) {
     //echo "${WORKSPACE}"
